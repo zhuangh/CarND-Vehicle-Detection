@@ -1,4 +1,6 @@
-**Self-Driving Cars - Vehicle Detection Project**
+## Self-Driving Cars - Vehicle Detection Project
+
+### Hao Zhuang, 2018
 
 The goals / steps of this project are the following:
 
@@ -10,6 +12,13 @@ The goals / steps of this project are the following:
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
+
+[cars]: ./images/cars.png
+[nocars]: ./images/nocars.png
+[hogs]: ./images/hogs.png
+[norm_features]: ./images/norm_features.png
+
+
 [image1]: ./examples/car_not_car.png
 [image2]: ./examples/HOG_example.jpg
 [image3]: ./examples/sliding_windows.jpg
@@ -19,7 +28,7 @@ The goals / steps of this project are the following:
 [image7]: ./examples/output_bboxes.png
 [video1]: ./project_video.mp4
 
-#### [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
+##### [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 
 Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
@@ -35,15 +44,22 @@ You're reading it!
 
 The code for this step is contained in the first code cell of the IPython notebook (or in lines # through # of the file called `some_file.py`).  
 
-I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
+I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` classes:
 
-![alt text][image1]
+![alt text][cars]
 
+and `non-vehicle` classes
+
+![alt text][nocars]
+
+ 
 I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
-Here is an example using the `YCrCb` color space and HOG parameters of `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
+Here is an example using the `YCrCb` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 
 
+![alt text][hogs]
+![alt text][norm_features]
 ![alt text][image2]
 
 #### 2. Explain how you settled on your final choice of HOG parameters.
@@ -101,3 +117,6 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
 
+
+
+A decision tree to decide the importance of the features.
