@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [norm_features]: ./images/norm_features.png
 [slide_windows]: ./images/slide_windows.png
 [boxes]: ./images/boxes.png
-[testheatmap]: ./images/testheatmap.png
+[testheatmap]: ./images/test_heatmap.png
 [heatmap1]:  ./images/heatmap1.png
 [heatmap2]:  ./images/heatmap2.png
 [heatmap3]:  ./images/heatmap3.png
